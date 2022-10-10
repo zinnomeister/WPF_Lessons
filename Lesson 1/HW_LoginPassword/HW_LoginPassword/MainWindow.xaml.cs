@@ -3,17 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Media;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace HW_LoginPassword
 {
@@ -70,6 +60,9 @@ namespace HW_LoginPassword
             InputPassword.Text = "";
 
             UiResultText.Text = "Successfully Login!";
+
+            SoundPlayer lion1 = new SoundPlayer(HW_LoginPassword.Resources.Resource1.lionsvoice1);
+            lion1.Play();
         }
 
         public void FailedLogin()
@@ -78,6 +71,9 @@ namespace HW_LoginPassword
             InputPassword.Text = "";
 
             UiResultText.Text = "Login Failed! Try again!";
+
+            SoundPlayer lion2 = new SoundPlayer(HW_LoginPassword.Resources.Resource1.lionsvoice2);
+            lion2.Play();
         }
     }
 

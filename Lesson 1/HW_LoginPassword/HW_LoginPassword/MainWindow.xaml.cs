@@ -79,22 +79,6 @@ namespace HW_LoginPassword
 
             UiResultText.Text = "Login Failed! Try again!";
         }
-
-        //private void ResultText()
-        //{
-
-        //}
-
-        //private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        //{
-
-        //}
-
-        //private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        //{
-
-        //}
-
     }
 
 }

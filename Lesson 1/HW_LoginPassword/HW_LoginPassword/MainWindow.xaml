@@ -5,22 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HW_LoginPassword"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="LoginPassword" 
+        
+        Height="550" 
+        Width="800">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="White" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Border 
             
             BorderBrush="Black" 
+            Background="#FFB3B3B3"
             BorderThickness="2" 
             HorizontalAlignment="Left" 
             Height="172" 
             Margin="176,143,0,0" 
-            VerticalAlignment="Top" Width="380"/>
+            VerticalAlignment="Top" Width="380"
+            CornerRadius="15"/>
         <TextBox
             x:Name="InputLogin"
-            HorizontalAlignment="Center"
+            HorizontalAlignment="Left"
                  VerticalAlignment="Top"
-                 Margin="0,200,0,0"
+                 Margin="300,200,0,0"
                  Width="200" 
+            
+            TextChanged="InputLogin_TextChanged" 
             ></TextBox>
         <!--<TextBox
             HorizontalAlignment="Center"
@@ -41,9 +54,9 @@
 
         <TextBox
             x:Name="InputPassword"
-            HorizontalAlignment="Center"
+            HorizontalAlignment="left"
                  VerticalAlignment="Top"
-                 Margin="0,250,0,0"
+                 Margin="300,250,0,0"
                  Width="200" 
             ></TextBox>
 
@@ -82,7 +95,7 @@
             HorizontalAlignment="Left" 
             Margin="380,77,0,0" 
             TextWrapping="NoWrap" 
-            Text="Input your login and password:" 
+            Text="Input login and password:" 
             TextDecorations="Underline"
             VerticalAlignment="Top" 
             Height="50" 

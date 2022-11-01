@@ -46,15 +46,28 @@ namespace HW_LoginPassword
 
         static void ExtractFromFile()
         {
-            List<string> allUsersFromFile = File.ReadAllLines(filePath).ToList();
+            //List<string> allUsersFromFile = WorkWithFiles.ReadTxtFile(filePath).ToList();
+
+            var readResult = WorkWithFiles.ReadTxtFile(filePath);
+            if (!readResult.isSuccess)
+            {
+                return;
+            }
+
+            List<string> allUsersFromFile = readResult.data.ToList();
+
+            WorkWithFiles.SomeData = "abc";
+
             foreach (string userString in allUsersFromFile)
             {
                 User userFromFile = new User();
+                
                 string[] userData = userString.Split(splitSeparator);
                 userFromFile.Name = userData[0];
                 userFromFile.Password = userData[1];
                 allUsers.Add(userFromFile);
             }
+
             Console.WriteLine();
         }
 

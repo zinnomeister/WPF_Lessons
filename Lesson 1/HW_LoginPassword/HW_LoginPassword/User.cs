@@ -9,6 +9,18 @@
         {
             return $"{Name}|{Password}";
         }
+
+
+        public string GetName()
+        {
+            return Name;
+        }
+
+        public static string GetName(User user)
+        {
+            return user.Name;
+        }
+
     }
    
 }
